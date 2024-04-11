@@ -74,7 +74,7 @@ function getArgumentsCount(funcs) {
  *
  */
 function getPowerFunction(exponent) {
-  return function (x) {
+  return function abc(x) {
     return x ** exponent;
   };
 }
@@ -113,7 +113,7 @@ function getPolynom() {
 function memoize(func) {
   let cache = null;
   let wasResult = false;
-  return function () {
+  return function abc() {
     if (!wasResult) {
       cache = func();
       wasResult = true;
@@ -138,7 +138,7 @@ function memoize(func) {
  * retryer() => 2
  */
 function retry(func, attempts) {
-  return function () {
+  return function abc() {
     let result;
     let attempt = 0;
     let success = false;
@@ -195,7 +195,7 @@ function logger(/* func, logFunc */) {
  *   partialUsingArguments(fn, 'a','b','c','d')() => 'abcd'
  */
 function partialUsingArguments(fn, ...args1) {
-  return function (...args2) {
+  return function abc(...args2) {
     return fn(...args1, ...args2);
   };
 }
@@ -219,7 +219,7 @@ function partialUsingArguments(fn, ...args1) {
  */
 function getIdGeneratorFunction(startFrom) {
   let id = startFrom - 1;
-  return function () {
+  return function abc() {
     id += 1;
     return id;
   };
